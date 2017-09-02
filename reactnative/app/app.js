@@ -4,7 +4,6 @@ import {
   Text,
   View
 } from 'react-native';
-import { Button } from 'native-base';
 
 export default class reactnative extends Component {
   render() {
