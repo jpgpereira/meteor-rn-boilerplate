@@ -19,8 +19,36 @@
   "devDependencies": {
     "babel-jest": "20.0.3",
     "babel-preset-react-native": "3.0.2",
+    "eslint": "^4.3.0",
+    "eslint-config-airbnb": "^15.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
+    "eslint-plugin-react-native": "^3.1.0",
     "jest": "20.0.4",
     "react-test-renderer": "16.0.0-alpha.12"
+  },
+  "eslintConfig": {
+    "extends": "airbnb",
+    "plugins": [
+      "react",
+      "react-native"
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".android.js",
+            ".ios.js"
+          ]
+        }
+      }
+    },
+    "rules": {
+      "react/jsx-filename-extension": 0,
+      "import/no-unresolved": [2, { "caseSensitive": false }]
+    }
   },
   "jest": {
     "preset": "react-native"
